@@ -1,0 +1,17 @@
+{
+  "app_name": "Headspace",
+  "app_id": "com.getsomeheadspace.android",
+  "raw_count": 5000,
+  "clean_count": 4734,
+  "collection_method": "google-play-scraper Python library",
+  "cleaning_steps": [
+    "Removed reviews under 10 characters",
+    "Removed duplicates",
+    "Lowercased all text",
+    "Removed emojis and special characters",
+    "Removed punctuation",
+    "Removed extra whitespace",
+    "Removed English stopwords",
+    "Lemmatized tokens"
+  ]
+}
