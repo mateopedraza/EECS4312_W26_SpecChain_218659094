@@ -1,15 +1,319 @@
 {
   "tests": [
     {
-      "test_id": "T_auto_1",
+      "test_id": "T_auto_001",
       "requirement_id": "FR_auto_1",
-      "scenario": "Logging a workout without crashing",
+      "scenario": "Refund Process for Unexpected Charge",
       "steps": [
-        "Open the workout logging screen",
-        "Enter workout details",
-        "Submit the workout"
+        "Log in as a subscriber who has been charged unexpectedly",
+        "Navigate to the refund request section",
+        "Request a refund"
       ],
-      "expected_result": "The workout is saved successfully and the application remains stable."
+      "expected_result": "The app provides a straightforward refund process with clear instructions"
+    },
+    {
+      "test_id": "T_auto_002",
+      "requirement_id": "FR_auto_1",
+      "scenario": "Refund Process Completion",
+      "steps": [
+        "Complete the refund request process",
+        "Verify refund request submission"
+      ],
+      "expected_result": "The app confirms the refund request has been successfully submitted"
+    },
+    {
+      "test_id": "T_auto_003",
+      "requirement_id": "FR_auto_2",
+      "scenario": "Cancel Subscription",
+      "steps": [
+        "Log in as a subscriber",
+        "Navigate to account settings",
+        "Select the option to cancel subscription"
+      ],
+      "expected_result": "The app allows the subscriber to cancel their subscription with a simple and clear process"
+    },
+    {
+      "test_id": "T_auto_004",
+      "requirement_id": "FR_auto_2",
+      "scenario": "Cancel Subscription Confirmation",
+      "steps": [
+        "Confirm cancellation of subscription",
+        "Verify subscription status update"
+      ],
+      "expected_result": "The app confirms the subscription has been successfully cancelled"
+    },
+    {
+      "test_id": "T_auto_005",
+      "requirement_id": "FR_auto_3",
+      "scenario": "View Billing Information",
+      "steps": [
+        "Log in as a subscriber",
+        "Navigate to subscription details",
+        "Review billing information"
+      ],
+      "expected_result": "The app displays a clear breakdown of charges with no hidden fees"
+    },
+    {
+      "test_id": "T_auto_006",
+      "requirement_id": "FR_auto_3",
+      "scenario": "Verify Transparent Billing",
+      "steps": [
+        "Check for any additional fees",
+        "Verify clarity of billing information"
+      ],
+      "expected_result": "The app provides transparent billing information with no unexpected charges"
+    },
+    {
+      "test_id": "T_auto_007",
+      "requirement_id": "FR_auto_4",
+      "scenario": "App Load Time",
+      "steps": [
+        "Open the app",
+        "Measure app load time"
+      ],
+      "expected_result": "The app loads within 2 seconds"
+    },
+    {
+      "test_id": "T_auto_008",
+      "requirement_id": "FR_auto_4",
+      "scenario": "App Responsiveness",
+      "steps": [
+        "Navigate through app features",
+        "Measure response time to user interactions"
+      ],
+      "expected_result": "The app responds to user interactions within 1 second"
+    },
+    {
+      "test_id": "T_auto_009",
+      "requirement_id": "FR_auto_5",
+      "scenario": "Google Fit Sync",
+      "steps": [
+        "Connect Google Fit account",
+        "Start a meditation session",
+        "Verify session data syncs with Google Fit"
+      ],
+      "expected_result": "The app syncs session data with Google Fit within 5 minutes"
+    },
+    {
+      "test_id": "T_auto_010",
+      "requirement_id": "FR_auto_5",
+      "scenario": "Verify Reliable Syncing",
+      "steps": [
+        "Verify session data accuracy in Google Fit",
+        "Check for any syncing errors"
+      ],
+      "expected_result": "The app reliably syncs data with Google Fit without errors"
+    },
+    {
+      "test_id": "T_auto_011",
+      "requirement_id": "FR_auto_6",
+      "scenario": "Error message provides clear guidance",
+      "steps": [
+        "Simulate an error",
+        "View error message"
+      ],
+      "expected_result": "Clear error message with troubleshooting steps is displayed"
+    },
+    {
+      "test_id": "T_auto_012",
+      "requirement_id": "FR_auto_6",
+      "scenario": "Error message is easily understandable",
+      "steps": [
+        "Simulate an error",
+        "Read error message"
+      ],
+      "expected_result": "Error message is clear and easy to understand"
+    },
+    {
+      "test_id": "T_auto_013",
+      "requirement_id": "FR_auto_7",
+      "scenario": "Audio plays smoothly during meditation",
+      "steps": [
+        "Start meditation session with audio",
+        "Monitor audio playback"
+      ],
+      "expected_result": "Audio plays continuously without interruptions or buffering"
+    },
+    {
+      "test_id": "T_auto_014",
+      "requirement_id": "FR_auto_7",
+      "scenario": "Audio resumes playback after pause",
+      "steps": [
+        "Start meditation session with audio",
+        "Pause audio",
+        "Resume audio"
+      ],
+      "expected_result": "Audio resumes playback smoothly without interruptions"
+    },
+    {
+      "test_id": "T_auto_015",
+      "requirement_id": "FR_auto_8",
+      "scenario": "Offline access to meditation sessions works",
+      "steps": [
+        "Download meditation session for offline use",
+        "Disable internet connection",
+        "Start meditation session"
+      ],
+      "expected_result": "Meditation session plays smoothly without interruptions"
+    },
+    {
+      "test_id": "T_auto_016",
+      "requirement_id": "FR_auto_8",
+      "scenario": "Offline access is indicated clearly",
+      "steps": [
+        "Download meditation session for offline use",
+        "Disable internet connection",
+        "Start meditation session"
+      ],
+      "expected_result": "App indicates offline mode clearly"
+    },
+    {
+      "test_id": "T_auto_017",
+      "requirement_id": "FR_auto_9",
+      "scenario": "Audio playback error message provides guidance",
+      "steps": [
+        "Simulate audio playback error",
+        "View error message"
+      ],
+      "expected_result": "Clear error message with troubleshooting steps is displayed"
+    },
+    {
+      "test_id": "T_auto_018",
+      "requirement_id": "FR_auto_9",
+      "scenario": "Audio playback error is easily resolved",
+      "steps": [
+        "Simulate audio playback error",
+        "Follow error message guidance"
+      ],
+      "expected_result": "Error is resolved with guidance from error message"
+    },
+    {
+      "test_id": "T_auto_019",
+      "requirement_id": "FR_auto_10",
+      "scenario": "Sleepcast plays smoothly",
+      "steps": [
+        "Start sleepcast",
+        "Monitor sleepcast playback"
+      ],
+      "expected_result": "Sleepcast plays continuously without interruptions or buffering"
+    },
+    {
+      "test_id": "T_auto_020",
+      "requirement_id": "FR_auto_10",
+      "scenario": "Sleepcast resumes playback after pause",
+      "steps": [
+        "Start sleepcast",
+        "Pause sleepcast",
+        "Resume sleepcast"
+      ],
+      "expected_result": "Sleepcast resumes playback smoothly without interruptions"
+    },
+    {
+      "test_id": "T_auto_021",
+      "requirement_id": "FR_auto_11",
+      "scenario": "Browse Sleep Content",
+      "steps": [
+        "Launch the app",
+        "Navigate to sleep content section",
+        "View available sleepcasts and relaxation sessions"
+      ],
+      "expected_result": "At least 10 different sleepcasts and relaxation sessions are displayed"
+    },
+    {
+      "test_id": "T_auto_022",
+      "requirement_id": "FR_auto_11",
+      "scenario": "Verify Sleep Content Variety",
+      "steps": [
+        "Browse through 5 pages of sleep content",
+        "Verify content variety on each page"
+      ],
+      "expected_result": "Content variety is consistent across all pages"
+    },
+    {
+      "test_id": "T_auto_023",
+      "requirement_id": "FR_auto_12",
+      "scenario": "Search for Sleepcast",
+      "steps": [
+        "Navigate to search bar",
+        "Enter a sleepcast keyword",
+        "View search results"
+      ],
+      "expected_result": "Relevant sleepcast results are displayed"
+    },
+    {
+      "test_id": "T_auto_024",
+      "requirement_id": "FR_auto_12",
+      "scenario": "Play Sleepcast",
+      "steps": [
+        "Select a sleepcast from search results",
+        "Verify play button is accessible",
+        "Play the sleepcast"
+      ],
+      "expected_result": "Sleepcast starts playing within 1 click after selection"
+    },
+    {
+      "test_id": "T_auto_025",
+      "requirement_id": "FR_auto_13",
+      "scenario": "View Meditation Progress",
+      "steps": [
+        "Complete a meditation session",
+        "Navigate to progress tracking section",
+        "View progress overview"
+      ],
+      "expected_result": "Clear overview of meditation progress and streaks is displayed"
+    },
+    {
+      "test_id": "T_auto_026",
+      "requirement_id": "FR_auto_13",
+      "scenario": "Verify Streaks",
+      "steps": [
+        "Complete multiple meditation sessions in a row",
+        "View progress overview",
+        "Verify streak counter"
+      ],
+      "expected_result": "Streak counter accurately reflects completed sessions"
+    },
+    {
+      "test_id": "T_auto_027",
+      "requirement_id": "FR_auto_14",
+      "scenario": "Access Mental Health Resources",
+      "steps": [
+        "Navigate to resources section",
+        "View list of resources"
+      ],
+      "expected_result": "List of reputable mental health resources and hotlines is displayed"
+    },
+    {
+      "test_id": "T_auto_028",
+      "requirement_id": "FR_auto_14",
+      "scenario": "Verify Resource Details",
+      "steps": [
+        "Select a resource from the list",
+        "View resource details"
+      ],
+      "expected_result": "Resource details include contact information and website"
+    },
+    {
+      "test_id": "T_auto_029",
+      "requirement_id": "FR_auto_15",
+      "scenario": "Complete Stress Management Session",
+      "steps": [
+        "Access stress management content",
+        "Complete a session",
+        "Report stress levels"
+      ],
+      "expected_result": "Reported stress levels indicate a decrease"
+    },
+    {
+      "test_id": "T_auto_030",
+      "requirement_id": "FR_auto_15",
+      "scenario": "Verify Session Effectiveness",
+      "steps": [
+        "Complete multiple stress management sessions",
+        "Track reported stress levels",
+        "Verify consistent decrease"
+      ],
+      "expected_result": "Consistent decrease in stress levels is reported"
     }
   ]
 }

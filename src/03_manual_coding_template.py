@@ -1,1 +1,1 @@
-"""creates/updates coding table template + instructions"""
+"""Manual coding helper template."""

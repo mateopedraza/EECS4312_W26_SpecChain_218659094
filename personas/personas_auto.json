@@ -1,0 +1,158 @@
+{
+  "personas": [
+    {
+      "id": "AP1",
+      "name": "Frustrated Subscriber",
+      "description": "A user experiencing difficulties with subscription and billing, seeking refunds and struggling with auto-renewal charges.",
+      "derived_from_group": "A1",
+      "goals": [
+        "Resolve billing issues",
+        "Obtain refunds",
+        "Cancel subscriptions easily"
+      ],
+      "pain_points": [
+        "Unexpected charges",
+        "Difficulties with refunds",
+        "Poor customer service"
+      ],
+      "context": [
+        "Meditation app users",
+        "Concerned about financial transactions"
+      ],
+      "constraints": [
+        "Limited technical expertise",
+        "Frustrated with existing processes"
+      ],
+      "evidence_reviews": [
+        "review_03216",
+        "review_03728",
+        "review_03166",
+        "review_02382",
+        "review_02400"
+      ]
+    },
+    {
+      "id": "AP2",
+      "name": "Frustrated User",
+      "description": "A user facing app performance and stability issues, impacting their meditation experience.",
+      "derived_from_group": "A2",
+      "goals": [
+        "Stable app performance",
+        "Reliable features",
+        "Effective meditation sessions"
+      ],
+      "pain_points": [
+        "App crashes",
+        "Slow load times",
+        "Syncing issues with Google Fit"
+      ],
+      "context": [
+        "Regular app users",
+        "Value a seamless experience"
+      ],
+      "constraints": [
+        "Technical issues",
+        "Time constraints"
+      ],
+      "evidence_reviews": [
+        "review_00612",
+        "review_01323",
+        "review_01312",
+        "review_00345",
+        "review_00927"
+      ]
+    },
+    {
+      "id": "AP3",
+      "name": "Audio Playback User",
+      "description": "A user experiencing audio playback issues during meditation sessions, disrupting their practice.",
+      "derived_from_group": "A3",
+      "goals": [
+        "Smooth audio playback",
+        "Reliable offline access",
+        "Error-free sessions"
+      ],
+      "pain_points": [
+        "Interrupted audio",
+        "Error messages",
+        "Offline playback issues"
+      ],
+      "context": [
+        "Regular meditators",
+        "Value uninterrupted sessions"
+      ],
+      "constraints": [
+        "Technical issues",
+        "Limited troubleshooting expertise"
+      ],
+      "evidence_reviews": [
+        "review_00088",
+        "review_00113",
+        "review_00506",
+        "review_01993",
+        "review_00326"
+      ]
+    },
+    {
+      "id": "AP4",
+      "name": "Sleepcast Listener",
+      "description": "A user experiencing issues with sleepcast and sleep-related features, impacting their rest.",
+      "derived_from_group": "A4",
+      "goals": [
+        "Effective sleepcasts",
+        "Reliable playback",
+        "Soothing sleep content"
+      ],
+      "pain_points": [
+        "Interrupted sleepcasts",
+        "Playback issues",
+        "Limited content options"
+      ],
+      "context": [
+        "Users seeking relaxation and sleep aid",
+        "Value calming content"
+      ],
+      "constraints": [
+        "Technical issues",
+        "Difficulty relaxing"
+      ],
+      "evidence_reviews": [
+        "review_02980",
+        "review_00615",
+        "review_03644",
+        "review_04982",
+        "review_00087"
+      ]
+    },
+    {
+      "id": "AP5",
+      "name": "Satisfied Meditator",
+      "description": "A user experiencing positive benefits from the app, seeking to continue their meditation journey.",
+      "derived_from_group": "A5",
+      "goals": [
+        "Continued meditation progress",
+        "Accessible mental health resources",
+        "Effective stress management"
+      ],
+      "pain_points": [
+        "Limited content",
+        "Financial concerns"
+      ],
+      "context": [
+        "Meditation enthusiasts",
+        "Value mental wellness"
+      ],
+      "constraints": [
+        "Time constraints",
+        "Limited awareness of features"
+      ],
+      "evidence_reviews": [
+        "review_02443",
+        "review_00062",
+        "review_03511",
+        "review_03838",
+        "review_02220"
+      ]
+    }
+  ]
+}

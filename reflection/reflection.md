@@ -1,5 +1,14 @@
-# Application: [Calm] 
-- Most important difference between pipelines: [The automated pipeline produced broader personas, while the manual pipeline produced more focused personas grounded in specific review groups.]
-- Most useful pipeline: [The hybrid pipeline produced the most balanced outputs because it preserved automation speed while improving clarity and traceability.] 
-- Most surprising finding: [Several automated requirements were grammatically correct but too vague to support reliable test generation.]
-- Observed weakness in the automated pipeline: [Some personas included unsupported assumptions that were not clearly grounded in the reviews.]
+# Reflection
+
+## Pipeline Comparison
+The manual pipeline produced focused, well grounded artifacts, but it only covered a small amount of the cleaned dataset, with a review coverage of `0.0127`. The groups and personas it generated feel trustworthy because of that narrow focus, but they don't speak for the full range of user experiences in the data. The automated pipeline solved the coverage problem, hitting `1.0` across review coverage, traceability ratio, and testability rate. The trade off was quality, some personas came out too broad, and a few requirements leaned on assumptions the reviews didn't really support.
+
+I think the hybrid pipeline ended up being the strongest overall. Rather than throwing out the automated work and starting from scratch, the hybrid approach refined it, checking each group's theme, its example reviews, and a targeted sample of representative reviews. Most of the revisions landed on descriptions, supporting examples, personas, requirements, and tests. Review membership itself barely changed, with only a handful of clearly mismatched cases getting reassigned. The hybrid metrics held at `1.0` for coverage, traceability, and testability, while the ambiguity ratio dropped to `0.0`. This ambiguity metric is keyword based, so the improvement mostly reflects rewriting requirements to avoid vague terms like fast, easy, smooth, or seamless in favour of concrete acceptance criteria, not that every sentence became perfectly precise.
+
+## Best Outputs
+The strongest personas came from the hybrid pipeline. The manual ones were narrower and often easier to justify line by line, but the hybrid personas struck a better balance: they stayed grounded in the review evidence while still representing the full dataset. The same was true for the requirements. The hybrid versions felt more testable and matched the revised personas better.
+
+On traceability, the automated and hybrid pipelines were numerically tied, but the hybrid had the edge in practice. The automated pipeline could trace every requirement back to a persona, but some of those requirements were still vague or based on claims the grouped reviews didn't seem to fully support. Having the numbers match didn't make the links feel solid.
+
+## Problems in the Automated Outputs
+The automated pipeline's main weaknesses were overgeneralization and ambiguity. Some personas made claims that the underlying reviews only weakly supported, things like broader integration behaviours or content recommendation patterns that weren't really there. Some requirements also sounded fine at first, but were hard to actually test, especially outcome based statements about helping users fall asleep or improving mental health. Those are hard to validate in any real way. The higher ambiguity ratio was partly a symptom of the same thing: the spec leaned on the kinds of vague keywords the metric directly flags. Taken together, the automated pipeline was fast and had a wide lens, but it needed a human pass in order to be trustworthy.

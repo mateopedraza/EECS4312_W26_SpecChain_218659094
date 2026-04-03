@@ -1,16 +1,334 @@
-
 {
   "tests": [
     {
-      "test_id": "T_auto_1",
+      "test_id": "T_manual_01",
       "requirement_id": "FR1",
-      "scenario": "Workout Logging Stability",
+      "scenario": "Show trial terms before payment confirmation",
       "steps": [
-        "Open the workout logging screen",
-        "Enter workout details",
-        "Submit the workout"
+        "Open onboarding and navigate to the subscription selection screen.",
+        "Choose a plan that includes a free trial.",
+        "View the payment confirmation screen before confirming payment."
       ],
-      "expected_result": "The workout is saved successfully and the application remains stable."
+      "expected_result": "The screen shows the trial length, renewal price, billing cadence, and auto renew behavior before the user confirms payment."
+    },
+    {
+      "test_id": "T_manual_02",
+      "requirement_id": "FR1",
+      "scenario": "Show paid plan terms before payment confirmation",
+      "steps": [
+        "Open the subscription selection screen.",
+        "Select a paid annual or monthly plan with no trial.",
+        "View the payment confirmation screen before confirming payment."
+      ],
+      "expected_result": "The screen shows the exact price, billing period, and renewal behavior before the user confirms payment."
+    },
+    {
+      "test_id": "T_manual_03",
+      "requirement_id": "FR2",
+      "scenario": "Display active trial status in account settings",
+      "steps": [
+        "Sign in with an account that is currently in a free trial.",
+        "Open account settings.",
+        "Open the subscription section."
+      ],
+      "expected_result": "The subscription section shows that a trial is active, includes the next billing date, identifies the billing source, and explains how the user can cancel."
+    },
+    {
+      "test_id": "T_manual_04",
+      "requirement_id": "FR2",
+      "scenario": "Display active paid subscription details",
+      "steps": [
+        "Sign in with an account that has an active paid subscription.",
+        "Open account settings.",
+        "Open the subscription section."
+      ],
+      "expected_result": "The subscription section shows the current paid plan state, the next billing date, the billing source, and the cancellation method."
+    },
+    {
+      "test_id": "T_manual_05",
+      "requirement_id": "FR3",
+      "scenario": "Confirm trial cancellation in the same flow",
+      "steps": [
+        "Sign in with an account that has an active trial.",
+        "Open the cancellation flow and confirm cancellation.",
+        "Stay within the same account flow after the action completes."
+      ],
+      "expected_result": "The app shows a cancellation confirmation message and updates the account state to canceled within the same user flow."
+    },
+    {
+      "test_id": "T_manual_06",
+      "requirement_id": "FR3",
+      "scenario": "Preserve canceled status after reopening account",
+      "steps": [
+        "Cancel an active subscription or trial.",
+        "Close and reopen the app, then sign back into the same account if needed.",
+        "Open account settings and view the subscription section again."
+      ],
+      "expected_result": "The subscription section still shows the canceled status and retains visible confirmation that cancellation was completed."
+    },
+    {
+      "test_id": "T_manual_07",
+      "requirement_id": "FR4",
+      "scenario": "Route Google Play billing issues to the correct support path",
+      "steps": [
+        "Sign in with an account billed through Google Play.",
+        "Open billing help from the account or support area.",
+        "Select an issue related to refund or payment problems."
+      ],
+      "expected_result": "The app identifies Google Play as the billing source and presents the correct Google Play refund or payment help path."
+    },
+    {
+      "test_id": "T_manual_08",
+      "requirement_id": "FR4",
+      "scenario": "Route direct billing issues to the correct support path",
+      "steps": [
+        "Sign in with an account billed directly by the service.",
+        "Open billing help from the account or support area.",
+        "Select an issue related to refund or payment problems."
+      ],
+      "expected_result": "The app identifies the direct billing provider and presents the correct in app refund or payment help path."
+    },
+    {
+      "test_id": "T_manual_09",
+      "requirement_id": "FR5",
+      "scenario": "Launch successfully from a cold start",
+      "steps": [
+        "Install the app on a supported device.",
+        "Open the app from the device launcher.",
+        "Wait for the main screen to finish loading."
+      ],
+      "expected_result": "The app loads to the main home screen without crashing or freezing."
+    },
+    {
+      "test_id": "T_manual_10",
+      "requirement_id": "FR5",
+      "scenario": "Launch successfully after app restart",
+      "steps": [
+        "Open the app once and then fully close it.",
+        "Open the app again from the device launcher.",
+        "Wait for the main screen to finish loading."
+      ],
+      "expected_result": "The app returns to the main home screen without crashing or freezing after restart."
+    },
+    {
+      "test_id": "T_manual_11",
+      "requirement_id": "FR6",
+      "scenario": "Navigate across core screens in one session",
+      "steps": [
+        "Open the app and load the home screen.",
+        "Navigate to the daily features screen and then to a content page.",
+        "Return to the home screen."
+      ],
+      "expected_result": "All screens remain responsive and the app does not require a restart or cache clearing."
+    },
+    {
+      "test_id": "T_manual_12",
+      "requirement_id": "FR6",
+      "scenario": "Repeat navigation without freezing",
+      "steps": [
+        "Open the app and move between home, daily features, and content pages multiple times.",
+        "Use back navigation and tab navigation during the same session.",
+        "Continue interacting with each screen."
+      ],
+      "expected_result": "The app remains responsive during repeated navigation and does not freeze or force a restart."
+    },
+    {
+      "test_id": "T_manual_13",
+      "requirement_id": "FR7",
+      "scenario": "Show recoverable error state when content fails to load",
+      "steps": [
+        "Open a content screen that cannot load because of a simulated service failure.",
+        "Wait for the failure to be detected.",
+        "Observe the screen state."
+      ],
+      "expected_result": "The app shows an error state with a retry action instead of leaving the user on a blank, frozen, or broken screen."
+    },
+    {
+      "test_id": "T_manual_14",
+      "requirement_id": "FR7",
+      "scenario": "Recover content loading through retry",
+      "steps": [
+        "Open a content screen while the first load attempt fails.",
+        "Restore the connection or service availability.",
+        "Tap the retry action in the error state."
+      ],
+      "expected_result": "The content screen loads successfully after retry and the user can continue without restarting the app."
+    },
+    {
+      "test_id": "T_manual_15",
+      "requirement_id": "FR8",
+      "scenario": "Play a streamed meditation from start to finish",
+      "steps": [
+        "Start a meditation session that requires a network connection.",
+        "Keep the connection available and do not pause or stop playback.",
+        "Wait until the session reaches its end."
+      ],
+      "expected_result": "The meditation audio continues for the full session duration and ends only when the content is complete."
+    },
+    {
+      "test_id": "T_manual_16",
+      "requirement_id": "FR8",
+      "scenario": "Play a downloaded meditation from start to finish",
+      "steps": [
+        "Download a meditation session for offline use.",
+        "Start the downloaded session and do not pause or stop playback.",
+        "Wait until the session reaches its end."
+      ],
+      "expected_result": "The downloaded meditation audio continues for the full session duration and ends only when the content is complete."
+    },
+    {
+      "test_id": "T_manual_17",
+      "requirement_id": "FR9",
+      "scenario": "Show playback failure state in the same session",
+      "steps": [
+        "Start a meditation session.",
+        "Trigger a playback interruption such as a simulated playback error.",
+        "Observe the app without leaving the session."
+      ],
+      "expected_result": "The app shows a playback failure state in the same session and includes a resume action."
+    },
+    {
+      "test_id": "T_manual_18",
+      "requirement_id": "FR9",
+      "scenario": "Resume from the last known playback position",
+      "steps": [
+        "Start a meditation session and let it play past the beginning.",
+        "Trigger a playback interruption and then activate the resume action.",
+        "Observe where playback restarts."
+      ],
+      "expected_result": "Playback resumes from the last played timestamp rather than restarting from the beginning."
+    },
+    {
+      "test_id": "T_manual_19",
+      "requirement_id": "FR10",
+      "scenario": "Play downloaded meditation while fully offline",
+      "steps": [
+        "Download a meditation session for offline use.",
+        "Place the device in airplane mode.",
+        "Start the downloaded session."
+      ],
+      "expected_result": "The downloaded session plays successfully without showing an offline or buffering error."
+    },
+    {
+      "test_id": "T_manual_20",
+      "requirement_id": "FR10",
+      "scenario": "Play downloaded meditation with network disabled",
+      "steps": [
+        "Download a meditation session for offline use.",
+        "Disable Wi Fi and mobile data while leaving the device out of airplane mode.",
+        "Start the downloaded session."
+      ],
+      "expected_result": "The downloaded session plays successfully without requiring a live connection or showing a false offline error."
+    },
+    {
+      "test_id": "T_manual_21",
+      "requirement_id": "FR11",
+      "scenario": "Keep Sleepcast playing with the screen off",
+      "steps": [
+        "Start a Sleepcast on a supported device.",
+        "Turn off the screen and leave the device idle.",
+        "Wait until the content ends or the user stops it."
+      ],
+      "expected_result": "The Sleepcast continues playing with the screen off and is not interrupted by supported idle behavior."
+    },
+    {
+      "test_id": "T_manual_22",
+      "requirement_id": "FR11",
+      "scenario": "Keep soundscape playing during supported screen off idle",
+      "steps": [
+        "Start a soundscape on a supported device.",
+        "Turn off the screen and allow the device to enter its supported idle state.",
+        "Observe playback during the listening session."
+      ],
+      "expected_result": "The soundscape continues playing through supported screen off idle behavior until the content ends or the user stops it."
+    },
+    {
+      "test_id": "T_manual_23",
+      "requirement_id": "FR12",
+      "scenario": "Do not vibrate after sleep content starts",
+      "steps": [
+        "Ensure optional vibration feedback is not enabled.",
+        "Start a Sleepcast or soundscape.",
+        "Remain on the sleep section after playback begins."
+      ],
+      "expected_result": "The app does not trigger device vibration after sleep content starts playing."
+    },
+    {
+      "test_id": "T_manual_24",
+      "requirement_id": "FR12",
+      "scenario": "Do not show a blocking modal during active sleep playback",
+      "steps": [
+        "Ensure optional modal based sleep feedback is not enabled.",
+        "Start sleep content and then return to the sleep section during the same listening session.",
+        "Observe the interface behavior."
+      ],
+      "expected_result": "The app does not show a blocking modal interruption during active sleep playback unless the user explicitly enabled that feedback."
+    },
+    {
+      "test_id": "T_manual_25",
+      "requirement_id": "FR13",
+      "scenario": "Filter sleep content by sound theme",
+      "steps": [
+        "Open the sleep content library.",
+        "Open filtering controls.",
+        "Apply a sound theme filter such as rain or ocean."
+      ],
+      "expected_result": "The library updates to show only sleep content matching the selected sound theme."
+    },
+    {
+      "test_id": "T_manual_26",
+      "requirement_id": "FR13",
+      "scenario": "Filter sleep content by content type",
+      "steps": [
+        "Open the sleep content library.",
+        "Open filtering controls.",
+        "Apply a content type filter such as Sleepcast or soundscape."
+      ],
+      "expected_result": "The library updates to show only sleep content matching the selected content type."
+    },
+    {
+      "test_id": "T_manual_27",
+      "requirement_id": "FR14",
+      "scenario": "Browse guided content by emotional need",
+      "steps": [
+        "Open the content library.",
+        "Browse the main content categories or entry points.",
+        "Inspect the available need based categories."
+      ],
+      "expected_result": "The library presents categories or entry points for stress, anxiety, sleep, and grief related support."
+    },
+    {
+      "test_id": "T_manual_28",
+      "requirement_id": "FR14",
+      "scenario": "Find grief support content through search or browse",
+      "steps": [
+        "Open the content library.",
+        "Search for grief support or navigate through need based categories.",
+        "Inspect the resulting content entry points."
+      ],
+      "expected_result": "The app provides a visible grief support entry point or category that leads to related guided content."
+    },
+    {
+      "test_id": "T_manual_29",
+      "requirement_id": "FR15",
+      "scenario": "Record completed sessions in progress history",
+      "steps": [
+        "Complete a meditation session while signed in.",
+        "Open the progress or history view.",
+        "Inspect the recorded sessions."
+      ],
+      "expected_result": "The completed session appears in the user's recorded history or progress view."
+    },
+    {
+      "test_id": "T_manual_30",
+      "requirement_id": "FR15",
+      "scenario": "Update progress after multiple completed sessions",
+      "steps": [
+        "Complete meditation sessions across multiple days or multiple times in sequence.",
+        "Open the progress or history view.",
+        "Inspect the displayed progress summary."
+      ],
+      "expected_result": "The app shows updated completed session history or milestone progress that reflects the completed sessions."
     }
   ]
 }

@@ -1,31 +1,169 @@
 {
   "personas": [
     {
-      "id": "P_hybrid_1",
-      "name": "Frequent Fitness Logger",
-      "description": "A user who depends on the app for regular workout tracking and expects logging to work reliably during or immediately after exercise.",
-      "derived_from_group": "H1",
+      "id": "AP1",
+      "name": "Subscription Concerned Subscriber",
+      "description": "Starts with a trial or paid plan and wants to avoid surprise renewals, hidden paywall limits, and confusing refund paths.",
+      "derived_from_group": "A1",
       "goals": [
-        "Log workouts quickly",
-        "Track activities without interruption"
+        "See plan terms before paying",
+        "Check renewal status and billing source",
+        "Cancel a plan without being charged again"
       ],
       "pain_points": [
-        "The app crashes while saving workouts",
-        "Previously entered activity data may disappear"
+        "Charged after canceling or after a trial ended",
+        "Cannot tell how a plan renews or who billed it",
+        "Support responses do not resolve refund questions"
       ],
       "context": [
-        "Using the app during exercise sessions",
-        "Using the app outdoors or while moving"
+        "Often discovers the problem after a renewal charge or after paid features fail to work as expected",
+        "May be billed through an app store or directly through the service",
+        "Wants enough information to decide whether the subscription is worth keeping"
       ],
       "constraints": [
-        "Workout logging must complete without crashing",
-        "Saved workout data must persist"
+        "Loses trust quickly after one billing mistake",
+        "Needs a visible record of plan status, cancellation, and payment source"
       ],
       "evidence_reviews": [
-        "rev_12",
-        "rev_41"
+        "review_00022",
+        "review_03216",
+        "review_03728",
+        "review_02400",
+        "review_00001"
       ],
-      "notes": "Refined the persona description and removed an unsupported assumption about synchronization."
+      "notes": "Tightened the automated persona around trial, renewal, refund, and paywall complaints. Removed vague claims about flexibility and general satisfaction."
+    },
+    {
+      "id": "AP2",
+      "name": "Reliability Focused Daily User",
+      "description": "Uses the app regularly and expects it to open, load content, and stay responsive through a normal session.",
+      "derived_from_group": "A2",
+      "goals": [
+        "Open the app and reach core sections",
+        "Start content without freezing or blank screens",
+        "Finish a session without the app crashing"
+      ],
+      "pain_points": [
+        "Crashes on launch or while moving between screens",
+        "Slow loading, blank states, or frozen controls",
+        "Some updates break integrations or make navigation harder"
+      ],
+      "context": [
+        "Uses the app for meditation, sleep, or daily check ins",
+        "Problems often show up after updates or during repeated navigation",
+        "Frustration starts when basic features fail before a session can even begin"
+      ],
+      "constraints": [
+        "Cannot rely on clearing cache, reinstalling, or restarting the phone every time",
+        "Needs core flows to work on supported devices without repeated recovery steps"
+      ],
+      "evidence_reviews": [
+        "review_00612",
+        "review_01312",
+        "review_00345",
+        "review_00927",
+        "review_01323"
+      ],
+      "notes": "Removed the unsupported primary focus on health app sync and centered the persona on launch, loading, and navigation reliability."
+    },
+    {
+      "id": "AP3",
+      "name": "Interrupted Meditation Listener",
+      "description": "Uses guided meditations to settle down and needs playback to continue without false offline errors or silent stops.",
+      "derived_from_group": "A3",
+      "goals": [
+        "Play a meditation from start to finish",
+        "Keep audio playing when the screen locks",
+        "Use downloaded sessions when offline"
+      ],
+      "pain_points": [
+        "Audio stops in the middle of a session",
+        "The app reports offline or playback errors even when the connection is available",
+        "A silent stop breaks focus because the user may not notice it right away"
+      ],
+      "context": [
+        "Often listens during quiet sessions where long pauses are already part of the content",
+        "May lock the phone or use offline content during the session",
+        "Depends on uninterrupted playback for relaxation and concentration"
+      ],
+      "constraints": [
+        "Recovery has to happen inside the same session",
+        "Downloaded content has to remain available offline"
+      ],
+      "evidence_reviews": [
+        "review_00008",
+        "review_00113",
+        "review_00506",
+        "review_01993",
+        "review_00326"
+      ],
+      "notes": "Grounded the persona in playback interruptions and false offline states and kept only claims that were directly supported by the grouped reviews."
+    },
+    {
+      "id": "AP4",
+      "name": "Bedtime Sleep Audio User",
+      "description": "Relies on Sleepcasts, soundscapes, or bedtime audio at night and wants the app to stay quiet, stable, and low effort once playback starts.",
+      "derived_from_group": "A4",
+      "goals": [
+        "Start sleep audio and let it continue while falling asleep",
+        "Keep playback running when the screen turns off",
+        "Find sleep content that matches a preferred sound or format"
+      ],
+      "pain_points": [
+        "Sleep audio stops after a few minutes or when the phone locks",
+        "Crashes or restarts force the user to begin bedtime setup again",
+        "Sleep content can be hard to browse by sound type or format"
+      ],
+      "context": [
+        "Uses the app late at night, often when already tired or anxious",
+        "May be trying not to wake fully while restarting content",
+        "Needs bedtime playback to work with minimal interaction"
+      ],
+      "constraints": [
+        "Night time flows should avoid vibration, blocking prompts, or repeated setup steps",
+        "Playback has to remain stable on supported devices during screen off use"
+      ],
+      "evidence_reviews": [
+        "review_00010",
+        "review_00615",
+        "review_04982",
+        "review_00087",
+        "review_00091"
+      ],
+      "notes": "Refined the automated sleep persona around night time playback reliability and sleep content browsing, while removing generic claims about relaxation alone."
+    },
+    {
+      "id": "AP5",
+      "name": "Routine Building Mindfulness User",
+      "description": "Uses the app as part of an ongoing routine for stress, sleep, grief, or general mental well being and values guided content that matches specific needs.",
+      "derived_from_group": "A5",
+      "goals": [
+        "Find guided sessions that fit the current need",
+        "Return to the app regularly and keep a routine",
+        "See progress from continued practice over time"
+      ],
+      "pain_points": [
+        "Often comes to the app during stress, grief, poor sleep, or overwhelm and needs content that fits that moment",
+        "Needs enough structure to keep returning instead of dropping the habit",
+        "Would lose value if helpful content became harder to find or track"
+      ],
+      "context": [
+        "May use the app daily or over long periods",
+        "Often relies on guided content rather than building a practice alone",
+        "Uses different parts of the library for stress, sleep, grief, focus, and general mindfulness"
+      ],
+      "constraints": [
+        "Content should stay organized around specific needs",
+        "Completed sessions and progress should remain visible over time"
+      ],
+      "evidence_reviews": [
+        "review_02443",
+        "review_00062",
+        "review_00614",
+        "review_03511",
+        "review_03838"
+      ],
+      "notes": "Removed unsupported claims about recommending the app to others and reframed the persona around long term use, need based content, and routine support."
     }
   ]
 }

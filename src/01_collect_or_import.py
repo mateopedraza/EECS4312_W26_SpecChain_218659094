@@ -1,11 +1,20 @@
+"""Collect raw Headspace reviews from Google Play."""
+
 import json
 import time
-from google_play_scraper import reviews, Sort
 
 APP_ID = "com.getsomeheadspace.android"
 OUTPUT_PATH = "data/reviews_raw.jsonl"
 
 def collect_reviews():
+    try:
+        from google_play_scraper import Sort, reviews
+    except ModuleNotFoundError as exc:
+        raise RuntimeError(
+            "google_play_scraper is required to recollect raw reviews. "
+            "Install it before running src/01_collect_or_import.py."
+        ) from exc
+
     all_reviews = []
     continuation_token = None
     target = 5000
@@ -27,7 +36,7 @@ def collect_reviews():
         print(f"  Collected {len(all_reviews)} reviews so far...")
         if not continuation_token:
             break
-        time.sleep(1)  # be polite to the server
+        time.sleep(1)
 
     print(f"Total collected: {len(all_reviews)}")
 

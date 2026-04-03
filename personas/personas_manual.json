@@ -1,22 +1,159 @@
-{  "personas": [
+{
+  "personas": [
     {
       "id": "P1",
-      "name": "Frequent Activity Tracker",
-      "description": "A user who relies on the app to log workouts frequently and expects stable performance.",
+      "name": "Subscription Conscious Trial User",
+      "description": "A prospective or new subscriber who wants to evaluate Headspace safely and expects clear pricing, fair billing, and trustworthy cancellation behavior.",
       "derived_from_group": "G1",
       "goals": [
-        "Track workouts consistently",
-        "Log activity quickly"      ],
+        "Understand pricing and renewal terms before subscribing",
+        "Start or cancel a trial without surprise charges",
+        "Resolve billing issues quickly when something goes wrong"
+      ],
       "pain_points": [
-        "App crashes during logging",
-        "Workout data sometimes disappears"      ],
+        "Unexpected charges after trial cancellation or renewal",
+        "Refund requests are denied or difficult to complete",
+        "Paywalls prevent meaningful evaluation before purchase"
+      ],
       "context": [
-        "Logging activities immediately after workouts",
-        "Using the app during outdoor exercise"      ],
+        "Evaluating the app during onboarding or a free trial",
+        "Managing subscriptions through Google Play or direct billing",
+        "Using a mental wellness app and expecting low stress support"
+      ],
       "constraints": [
-        "Logging must be reliable",
-        "Data should not be lost"       ],
+        "Pricing and renewal terms must be explicit before payment",
+        "Cancellation state must be visible and trustworthy",
+        "Billing help must be accessible without long back and forth support loops"
+      ],
       "evidence_reviews": [
-        "rev_12",
-        "rev_45"      ]
-    }  ] }
+        "review_00022",
+        "review_00031",
+        "review_00185"
+      ]
+    },
+    {
+      "id": "P2",
+      "name": "Reliability Focused Daily User",
+      "description": "A user who opens Headspace for regular daily use and expects the app to launch quickly, navigate smoothly, and remain stable during normal interactions.",
+      "derived_from_group": "G2",
+      "goals": [
+        "Open the app quickly when needed",
+        "Navigate core screens without freezing or crashing",
+        "Use daily features without technical friction"
+      ],
+      "pain_points": [
+        "Frequent crashes during routine actions",
+        "Screens freeze or take too long to load",
+        "Basic features return errors instead of working reliably"
+      ],
+      "context": [
+        "Opening the app during short breaks or daily routines",
+        "Moving between home, daily check ins, and content screens",
+        "Using the app on a mobile device where quick access matters"
+      ],
+      "constraints": [
+        "The app must launch consistently on supported devices",
+        "Core navigation must not require repeated restarts or cache clearing",
+        "Recoverable failures should not force the user out of the flow"
+      ],
+      "evidence_reviews": [
+        "review_00004",
+        "review_00021",
+        "review_00065"
+      ]
+    },
+    {
+      "id": "P3",
+      "name": "Interrupted Meditation Practitioner",
+      "description": "A regular meditator who depends on uninterrupted playback and clear recovery behavior so sessions remain calm, immersive, and trustworthy.",
+      "derived_from_group": "G3",
+      "goals": [
+        "Complete meditation sessions without interruption",
+        "Trust the app during longer audio sessions",
+        "Resume quickly if playback fails"
+      ],
+      "pain_points": [
+        "Meditation audio pauses or stops mid session",
+        "False offline or playback errors break concentration",
+        "Users cannot tell whether silence is intentional or a failure"
+      ],
+      "context": [
+        "Practicing guided meditation, focus sessions, or longer audio content",
+        "Listening with the screen dimmed or while minimizing the app",
+        "Using the app specifically to reduce stress and maintain focus"
+      ],
+      "constraints": [
+        "Playback continuity must be reliable enough to preserve focus",
+        "Interruptions must be surfaced immediately and clearly",
+        "Users need a way to resume from the point of failure"
+      ],
+      "evidence_reviews": [
+        "review_00023",
+        "review_00028",
+        "review_00113"
+      ]
+    },
+    {
+      "id": "P4",
+      "name": "Sleepcast Dependent Bedtime User",
+      "description": "A sleep focused user who relies on Sleepcasts, soundscapes, and bedtime audio at night and needs the experience to remain stable, quiet, and easy to use in low attention moments.",
+      "derived_from_group": "G4",
+      "goals": [
+        "Fall asleep using sleep focused audio",
+        "Choose appropriate bedtime content quickly",
+        "Keep nighttime playback running without waking up again"
+      ],
+      "pain_points": [
+        "Sleepcasts crash or cut off after a few minutes",
+        "Abrupt stops or vibrations wake the user back up",
+        "Sleep content is hard to browse or filter at bedtime"
+      ],
+      "context": [
+        "Using the app at night with minimal screen interaction",
+        "Trying to fall asleep while anxious, exhausted, or caring for a newborn",
+        "Relying on screen off playback for longer overnight listening"
+      ],
+      "constraints": [
+        "Sleep content must keep playing with the screen off",
+        "The interface must be low friction and easy to browse in bed",
+        "Playback should avoid disruptive haptics or abrupt audio failure"
+      ],
+      "evidence_reviews": [
+        "review_00087",
+        "review_00091",
+        "review_00130"
+      ]
+    },
+    {
+      "id": "P5",
+      "name": "Mindfulness Seeking Recovery User",
+      "description": "A user who turns to Headspace for anxiety relief, stress reduction, grief support, and long term personal growth through guided mindfulness.",
+      "derived_from_group": "G5",
+      "goals": [
+        "Reduce stress, anxiety, or emotional overwhelm",
+        "Build a sustainable meditation routine",
+        "Find supportive content that matches a current life need"
+      ],
+      "pain_points": [
+        "Needs guided support during difficult emotional periods",
+        "May struggle to maintain a routine without structure and encouragement",
+        "Needs content that feels approachable and relevant to the moment"
+      ],
+      "context": [
+        "Using the app for daily self care, recovery, or emotional support",
+        "Engaging with meditation courses, grief packs, or short calming sessions",
+        "Returning over months or years to build a consistent habit"
+      ],
+      "constraints": [
+        "Supportive content must be easy to discover by need",
+        "The experience must reinforce consistency over time",
+        "Guidance should feel calming and accessible to beginners and returning users"
+      ],
+      "evidence_reviews": [
+        "review_00062",
+        "review_00169",
+        "review_00614"
+      ]
+    }
+  ]
+}

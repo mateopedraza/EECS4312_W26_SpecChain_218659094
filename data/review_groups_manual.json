@@ -2,11 +2,163 @@
   "groups": [
     {
       "group_id": "G1",
-      "theme": "App crashes during activity logging, THIS IS A AN EXAMPLE, PLEASE REMOVE ",
-      "review_ids": ["rev_12", "rev_33", "rev_45", "rev_89"],
+      "theme": "Trial, billing, refund, and paywall complaints",
+      "review_ids": [
+        "review_00001",
+        "review_00005",
+        "review_00018",
+        "review_00022",
+        "review_00025",
+        "review_00031",
+        "review_00036",
+        "review_00042",
+        "review_00069",
+        "review_00078",
+        "review_00145",
+        "review_00185"
+      ],
       "example_reviews": [
-        "The app crashes every time I log my run.",
-        "Logging workouts causes the app to freeze."
+        "awful app mean purchase subscription im charged year refund option used app 3 day hated service never use yet required continue paying awful customer service stay far away anyone anxiety doesnt need extra stress",
+        "terrible company refused refund money benefit service",
+        "application work android device barely used raised concern three time customer service refund request annual fee response script copied pasted three time empathy understanding situation save time money even try app",
+        "screen signed said first 14 day free canceled 5 day later since track keep stopping minute oh dear something wrong somehow membership still active next year though canceled charged full price provided screenshot customer service said didnt get trial explanation least sincerely apologize disappointment extremely false advertising",
+        "first encourage install take detail tell gotta pay annual fee use app even use trial take card detail fair practice",
+        "someone household signed free trial without knowledge became aware trial expired charged full year service contacted day charge made let know happened want service asked would possible get full partial refund refused overall app negative effect mental health",
+        "helpful app worst part experience eventually charged whole year even though subscribed trial cancelled expired found app unhelpful refuse offer even partial refund disappointing service",
+        "deleted like apps least 1 free stuff everything behind paywall im sure app promoted something free first time came across app everything locked unbelievable apps like subscription based everything considering mental health honestly apps like finch better cute dont mind paywall lock everything completely even emergency breath exercise insane",
+        "shady lame tricky little deviant tell get free guest pas 30 day share friend still dont get anymore access still want sign free trial trial charge full price say send guest pas new member get access headspace month membership automatically renews paid membership scam way",
+        "need pay monthly subscription anything dont mean good feature like apps mean first thing click tell start free trial app usable without",
+        "awful apparently purchased subscription google play store google history subscription headspace claim ignorance say purchased third party site problem get charged 14 buck month app dont use dont want cannot cancel reporting bbb attorney general couple class action attorney know deceptive business practice dont buy subscribe",
+        "paying month cancelling receiving confirmation cancellation headspace taken money account tried resolve claimed couldnt help needed ask refund google play however suspiciously headspace took payment directly account time google play stuck payment gone access service"
+      ]
+    },
+    {
+      "group_id": "G2",
+      "theme": "App crashes, freezes, and slow loading during basic use",
+      "review_ids": [
+        "review_00004",
+        "review_00006",
+        "review_00012",
+        "review_00017",
+        "review_00021",
+        "review_00027",
+        "review_00035",
+        "review_00038",
+        "review_00045",
+        "review_00048",
+        "review_00057",
+        "review_00065"
+      ],
+      "example_reviews": [
+        "app crash whenever try scroll single",
+        "recently downloaded app week based cigna recommendation im getting annoying email asking daily check go today app keep crashing wasnt looking additional reason meditate find zen",
+        "app crashing frequently please fix issue soon possible thank",
+        "crash time reliable",
+        "worked fine first day every time click daily assessment crash",
+        "freeze daily clear cache less every time open",
+        "recently certain video opening getting error asked click ok button",
+        "enjoy meditation exercise app seems hard time consistently loading ive restart phone three four time far order get app load properly calming experience",
+        "app pure junk horrible audio quality crash time try exit mediation wont load load slow app background play video sooo many ux issue app cant app bad level something",
+        "gor last month app glitchy often crash",
+        "crash every time use waste money",
+        "constantly crashing freezing despite restarts reinstalls changing setting incredibly frustrating use used great app interface cluttered harder ever find youre looking im giving switching alternative"
+      ]
+    },
+    {
+      "group_id": "G3",
+      "theme": "Meditation and audio playback stops mid-session",
+      "review_ids": [
+        "review_00007",
+        "review_00008",
+        "review_00020",
+        "review_00023",
+        "review_00028",
+        "review_00037",
+        "review_00047",
+        "review_00059",
+        "review_00076",
+        "review_00082",
+        "review_00084",
+        "review_00113"
+      ],
+      "example_reviews": [
+        "app worth subscription barely function session constantly interrupted pause skip content helpful session found free online app setting also default sharing selling personal data including information targetted ad disappointing",
+        "currently meditation keep auto pausing say youre offline despite perfect connection constant borderline unusable looking online one fix asap",
+        "uninstalling user app year however past 68 month app become unstable stopping playing content saying there problem hanging circumnavigated using app web site web site pushing app new content real shame wanting look mental wellbeing app longer soothing place deeply frustrating troublesome annoying place seek calm",
+        "ive used headspace long time app become extremely unreliable meditation frequently stop show oops something went wrong completely break focus happening month try get help im pushed ai tell uninstall reinstall app thats real solution especially midmeditation frustrating nearly impossible reach real person support",
+        "ive using app year great companion help focus ground mind andy undergone serious training qualified teaching meditation presence voice soothing help lot however past month app stop mid meditation saying problem session cut short unpredictable basis basically ruin experience would kindly ask developer fix",
+        "new samsung galaxy phone frequently stop meditation get error message",
+        "good content app tech let love sound scape stop 15 minute show error oh dear somethings wrong using app occassionally past month keep getting error every single time",
+        "used like app lot recently many guided meditation fail middle error take many minutos know stopped",
+        "using app 3 month regular basis paid yearly subscription whenever start meditation work fine stop usually notice later everytime clear app cache restart happens everyday kinda disappointed",
+        "although good concept theory quite annoying practice even premium subscription 1 offline access whatsoever app load data turned 2 playing podcasts longer content pause regularly screen awake 3 unprofessional unpleasant voice narration compared industry standard might expert meditation voice dissatifying medito fabolous another level 4 extensive library confusing guide needed",
+        "meditation stop playing audio troubleshooting terrible try give responsibility problem terrible price asks",
+        "worst app ever app trash nothing change relaxing app stop playing middle meditation without letting know way know stop hear nothing bit check screen happens much hard relax since sometimes long pause sometimes app stopped unless something significantly improves renew subscription better apps"
+      ]
+    },
+    {
+      "group_id": "G4",
+      "theme": "Sleep-focused users relying on Sleepcasts and bedtime audio",
+      "review_ids": [
+        "review_00002",
+        "review_00010",
+        "review_00040",
+        "review_00044",
+        "review_00058",
+        "review_00083",
+        "review_00087",
+        "review_00091",
+        "review_00107",
+        "review_00122",
+        "review_00125",
+        "review_00130"
+      ],
+      "example_reviews": [
+        "used love sleep cast repeat option continuous option would nice however since last app functionality suck either wont open open feature stop working",
+        "ive loved app year unfortunately sleepcasts started crashing minute past month ive updated app made sure wifi even bought new phone thinking still happens sadly doesnt get fixed soon ill cancel subscription delete app really dont want please fix app",
+        "app lifesaver managing anxiety sleep ive using year lately 10min sleep cast crash wake start kinda defeat purpose tried change setting battery background data nothing seems help",
+        "sleepcasts great app get worse time ui freeze lot almost unusable need spend qa",
+        "used year past month genuinely awful unusable sleepcasts routinely cutting 4 10 minute today 15 minute meditation stopped working leaving exit meditation state check met error message also way app vibrates click sleep section night super unnecessary unexpected",
+        "used love app lately sleep cast meditation shut minute reason defeat purpose",
+        "past found app really helped inability fall asleep recently subscribed rather helping fall asleep app adding frustration frequently crash last night tried 4 time listen sleep cast time app crashed 5 10 minute disappointing work app really helpful",
+        "really like sleepcasts poorly organized please provide filtersort option would like able find sleepcasts rain instance ocean sound running water wildlife also getting sleep good also want smart alarm way wake gently similar meditation want start soft slowly increasing volume gently wake sleep unlike startling alarm clock",
+        "sleepcasts stop minute massively frustrating youre already feeling edge",
+        "sleepcasts crash total ui fail complexity cant even get stress management course right loop intro video course doesnt get added main view go hunt there way see subsequent content course ive watched headspace go useful 57ish year ago rock bottom cash grab today spend hard earned money company appreciates one fire ui director wrong direction",
+        "soundscapes keep crashing within 15 minute suddenly everything go quiet whilst falling asleep actually waking annoying rebooting phone reinstalling app doesnt help various time interface refuse load app startup home screen app unorganized annoys ive even found good soundscape calm fall asleep",
+        "keep crashing middle sleepcasts newborn need able get sleep quickly husband shift 25 hour unhelpful crash minute send back square 1"
+      ]
+    },
+    {
+      "group_id": "G5",
+      "theme": "Users reporting strong mental-health and relaxation benefits",
+      "review_ids": [
+        "review_00024",
+        "review_00026",
+        "review_00049",
+        "review_00055",
+        "review_00062",
+        "review_00079",
+        "review_00086",
+        "review_00169",
+        "review_00193",
+        "review_00325",
+        "review_00358",
+        "review_00614"
+      ],
+      "example_reviews": [
+        "love listening bed help unwind",
+        "meditation session relaxing needed break",
+        "headspace awesome much content offered help life journey grateful suffered chronic pain since child information contained amazing helpful wherever moment recommend headspace encourage everyone give try",
+        "amazing experience ebb feature reflection helped make lot progress personal goal mental state notice seems 30 minute limit ebb chat session see instituted feel artificial really think way previously without time limit beneficial sometimes 30minutes enough time able reflect thing time limit removed",
+        "using app year honestly say meditation course daily medication wake ups helped mental health lot highly recommend 6 year later still highly recommend updated lot honestly better great app community",
+        "andy puddicombe voice headspace stepped back others stepped discovered andy netflix helped tune meditation got frustrated earlier couldnt find meditation voiced patience found still thanks headspace thank andy meditation guidance hope getting looking ongoing",
+        "helped lot calming slowing thing recommend problem",
+        "completed 1000th meditation headspace love changed life many way",
+        "lovely app help learn meditate money well spent anyone whod like guidance meditation",
+        "love app helped much short time totally worth price excited watch grow",
+        "helpful learn basic meditation relaxation technique",
+        "truly fabulous experienced loss subscribed grief pack helped monumentally still use everyday day worth every penny"
       ]
     }
-  ]}
+  ]
+}

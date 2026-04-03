@@ -1,16 +1,334 @@
 {
   "tests": [
     {
-      "test_id": "T_hybrid_1",
+      "test_id": "T_hybrid_001",
       "requirement_id": "FR_hybrid_1",
-      "scenario": "Save a workout entry without crashing",
+      "scenario": "Show trial terms before payment confirmation",
       "steps": [
-        "Open the workout logging feature",
-        "Enter workout information",
-        "Submit the workout"
+        "Open onboarding and navigate to the subscription selection screen.",
+        "Choose a plan that includes a free trial.",
+        "View the payment confirmation screen before confirming payment."
       ],
-      "expected_result": "The workout is saved successfully and the application does not crash.",
-      "notes": "Revised the expected result to match the updated hybrid requirement."
+      "expected_result": "The screen shows the trial length, renewal price, billing period, and automatic renewal behavior before the user confirms payment."
+    },
+    {
+      "test_id": "T_hybrid_002",
+      "requirement_id": "FR_hybrid_1",
+      "scenario": "Show paid plan terms before payment confirmation",
+      "steps": [
+        "Open the subscription selection screen.",
+        "Select a paid annual or monthly plan with no trial.",
+        "View the payment confirmation screen before confirming payment."
+      ],
+      "expected_result": "The screen shows the exact price, billing period, and renewal behavior before the user confirms payment."
+    },
+    {
+      "test_id": "T_hybrid_003",
+      "requirement_id": "FR_hybrid_2",
+      "scenario": "Display active trial status in account settings",
+      "steps": [
+        "Sign in with an account that is currently in a free trial.",
+        "Open account settings.",
+        "Open the subscription section."
+      ],
+      "expected_result": "The subscription section shows that a trial is active, includes the next billing date, identifies the billing source, and explains how the user can cancel."
+    },
+    {
+      "test_id": "T_hybrid_004",
+      "requirement_id": "FR_hybrid_2",
+      "scenario": "Display active paid subscription details",
+      "steps": [
+        "Sign in with an account that has an active paid subscription.",
+        "Open account settings.",
+        "Open the subscription section."
+      ],
+      "expected_result": "The subscription section shows the current paid plan state, the next billing date, the billing source, and the cancellation method."
+    },
+    {
+      "test_id": "T_hybrid_005",
+      "requirement_id": "FR_hybrid_3",
+      "scenario": "Confirm cancellation in the same flow",
+      "steps": [
+        "Sign in with an account that has an active trial or paid subscription.",
+        "Open the cancellation flow and confirm cancellation.",
+        "Stay within the same account flow after the action completes."
+      ],
+      "expected_result": "The app shows a cancellation confirmation message and updates the account state to canceled within the same user flow."
+    },
+    {
+      "test_id": "T_hybrid_006",
+      "requirement_id": "FR_hybrid_3",
+      "scenario": "Preserve canceled status after reopening account",
+      "steps": [
+        "Cancel an active subscription or trial.",
+        "Close and reopen the app, then sign back into the same account if needed.",
+        "Open account settings and view the subscription section again."
+      ],
+      "expected_result": "The subscription section still shows the canceled status and retains visible confirmation that cancellation was completed."
+    },
+    {
+      "test_id": "T_hybrid_007",
+      "requirement_id": "FR_hybrid_4",
+      "scenario": "Route app store billing issues to the matching help path",
+      "steps": [
+        "Sign in with an account billed through an app store.",
+        "Open billing help from the account or support area.",
+        "Select an issue related to refund or payment problems."
+      ],
+      "expected_result": "The app identifies the app store as the billing source and presents the matching refund or payment support path."
+    },
+    {
+      "test_id": "T_hybrid_008",
+      "requirement_id": "FR_hybrid_4",
+      "scenario": "Route direct billing issues to the matching help path",
+      "steps": [
+        "Sign in with an account billed directly by the service.",
+        "Open billing help from the account or support area.",
+        "Select an issue related to refund or payment problems."
+      ],
+      "expected_result": "The app identifies direct billing as the payment source and presents the matching refund or payment support path."
+    },
+    {
+      "test_id": "T_hybrid_009",
+      "requirement_id": "FR_hybrid_5",
+      "scenario": "Launch successfully from a cold start",
+      "steps": [
+        "Install the app on a supported device.",
+        "Open the app from the device launcher.",
+        "Wait for the main screen to finish loading."
+      ],
+      "expected_result": "The app loads to the main home screen without crashing or freezing."
+    },
+    {
+      "test_id": "T_hybrid_010",
+      "requirement_id": "FR_hybrid_5",
+      "scenario": "Launch successfully after app restart",
+      "steps": [
+        "Open the app once and then fully close it.",
+        "Open the app again from the device launcher.",
+        "Wait for the main screen to finish loading."
+      ],
+      "expected_result": "The app returns to the main home screen without crashing or freezing after restart."
+    },
+    {
+      "test_id": "T_hybrid_011",
+      "requirement_id": "FR_hybrid_6",
+      "scenario": "Navigate across core screens in one session",
+      "steps": [
+        "Open the app and load the home screen.",
+        "Navigate to the sleep section and then to a meditation content page.",
+        "Return to the home screen."
+      ],
+      "expected_result": "All screens remain responsive and the app does not require a restart."
+    },
+    {
+      "test_id": "T_hybrid_012",
+      "requirement_id": "FR_hybrid_6",
+      "scenario": "Repeat navigation without freezing",
+      "steps": [
+        "Open the app and move between home, sleep, and meditation screens multiple times.",
+        "Use back navigation and tab navigation during the same session.",
+        "Continue interacting with each screen."
+      ],
+      "expected_result": "The app remains responsive during repeated navigation and does not freeze or force a restart."
+    },
+    {
+      "test_id": "T_hybrid_013",
+      "requirement_id": "FR_hybrid_7",
+      "scenario": "Show recoverable error state when content fails to load",
+      "steps": [
+        "Open a content screen that cannot load because of a simulated service failure.",
+        "Wait for the failure to be detected.",
+        "Observe the screen state."
+      ],
+      "expected_result": "The app shows an error state with a retry action instead of leaving the user on a blank, frozen, or broken screen."
+    },
+    {
+      "test_id": "T_hybrid_014",
+      "requirement_id": "FR_hybrid_7",
+      "scenario": "Recover content loading through retry",
+      "steps": [
+        "Open a content screen while the first load attempt fails.",
+        "Restore the connection or service availability.",
+        "Tap the retry action in the error state."
+      ],
+      "expected_result": "The content screen loads after retry and the user can continue without restarting the app."
+    },
+    {
+      "test_id": "T_hybrid_015",
+      "requirement_id": "FR_hybrid_8",
+      "scenario": "Play a streamed meditation from start to finish",
+      "steps": [
+        "Start a meditation session that requires a network connection.",
+        "Keep the connection available and do not pause or stop playback.",
+        "Wait until the session reaches its end."
+      ],
+      "expected_result": "The meditation audio continues for the full session duration and ends only when the content is complete."
+    },
+    {
+      "test_id": "T_hybrid_016",
+      "requirement_id": "FR_hybrid_8",
+      "scenario": "Play a meditation with the screen locked",
+      "steps": [
+        "Start a meditation session.",
+        "Lock the device screen while playback continues.",
+        "Wait until the session reaches its end without pausing it."
+      ],
+      "expected_result": "The meditation audio continues while the screen is locked and finishes only when the session ends."
+    },
+    {
+      "test_id": "T_hybrid_017",
+      "requirement_id": "FR_hybrid_9",
+      "scenario": "Show playback failure state in the same meditation session",
+      "steps": [
+        "Start a meditation session.",
+        "Trigger a playback interruption such as a simulated playback error.",
+        "Observe the app without leaving the session."
+      ],
+      "expected_result": "The app shows a playback failure state in the same session and includes a resume action."
+    },
+    {
+      "test_id": "T_hybrid_018",
+      "requirement_id": "FR_hybrid_9",
+      "scenario": "Resume from the last known playback position",
+      "steps": [
+        "Start a meditation session and let it play beyond the beginning.",
+        "Trigger a playback interruption and then activate the resume action.",
+        "Observe where playback restarts."
+      ],
+      "expected_result": "Playback resumes from the last played point rather than restarting from the beginning."
+    },
+    {
+      "test_id": "T_hybrid_019",
+      "requirement_id": "FR_hybrid_10",
+      "scenario": "Play downloaded meditation while fully offline",
+      "steps": [
+        "Download a meditation session for offline use.",
+        "Place the device in airplane mode.",
+        "Start the downloaded session."
+      ],
+      "expected_result": "The downloaded session plays without showing an offline or buffering error."
+    },
+    {
+      "test_id": "T_hybrid_020",
+      "requirement_id": "FR_hybrid_10",
+      "scenario": "Play downloaded meditation with network disabled",
+      "steps": [
+        "Download a meditation session for offline use.",
+        "Disable Wi Fi and mobile data while leaving the device out of airplane mode.",
+        "Start the downloaded session."
+      ],
+      "expected_result": "The downloaded session starts and plays without requiring a live connection."
+    },
+    {
+      "test_id": "T_hybrid_021",
+      "requirement_id": "FR_hybrid_11",
+      "scenario": "Keep Sleepcast playing with the screen turned off",
+      "steps": [
+        "Start a Sleepcast on a supported device.",
+        "Turn off the device screen.",
+        "Wait through normal playback time without manually stopping the audio."
+      ],
+      "expected_result": "The Sleepcast continues to play while the screen is off until the content ends or the user stops it."
+    },
+    {
+      "test_id": "T_hybrid_022",
+      "requirement_id": "FR_hybrid_11",
+      "scenario": "Keep soundscape playback active during supported idle use",
+      "steps": [
+        "Start a soundscape or other bedtime audio track on a supported device.",
+        "Let the device enter its supported idle state with the screen off.",
+        "Observe playback until the track ends."
+      ],
+      "expected_result": "The bedtime audio keeps playing during supported idle use and does not stop when the screen turns off."
+    },
+    {
+      "test_id": "T_hybrid_023",
+      "requirement_id": "FR_hybrid_12",
+      "scenario": "Avoid vibration after sleep audio has started",
+      "steps": [
+        "Start a Sleepcast or soundscape.",
+        "Return to the sleep section during the same session.",
+        "Observe whether the app vibrates."
+      ],
+      "expected_result": "The app does not vibrate after sleep audio has started unless vibration feedback was enabled in settings."
+    },
+    {
+      "test_id": "T_hybrid_024",
+      "requirement_id": "FR_hybrid_12",
+      "scenario": "Avoid blocking prompts during an active sleep session",
+      "steps": [
+        "Start sleep audio.",
+        "Navigate back to the sleep section while playback continues.",
+        "Observe whether a blocking prompt interrupts the flow."
+      ],
+      "expected_result": "The app does not show a blocking prompt during the active sleep session unless the user enabled that feedback."
+    },
+    {
+      "test_id": "T_hybrid_025",
+      "requirement_id": "FR_hybrid_13",
+      "scenario": "Browse sleep content by content type",
+      "steps": [
+        "Open the sleep section of the app.",
+        "Open the available filter or category controls.",
+        "Choose one content type such as Sleepcast or soundscape."
+      ],
+      "expected_result": "The sleep library updates to show content that matches the selected content type."
+    },
+    {
+      "test_id": "T_hybrid_026",
+      "requirement_id": "FR_hybrid_13",
+      "scenario": "Browse sleep content by sound theme",
+      "steps": [
+        "Open the sleep section of the app.",
+        "Open the available filter or category controls.",
+        "Choose one sound theme such as rain or ocean."
+      ],
+      "expected_result": "The sleep library updates to show content that matches the selected sound theme."
+    },
+    {
+      "test_id": "T_hybrid_027",
+      "requirement_id": "FR_hybrid_14",
+      "scenario": "Show guided content categories for common needs",
+      "steps": [
+        "Open the library or browse area.",
+        "Look for guided content categories or entry points.",
+        "Review the available need based categories."
+      ],
+      "expected_result": "The library includes categories or entry points for stress, sleep, grief, and daily practice."
+    },
+    {
+      "test_id": "T_hybrid_028",
+      "requirement_id": "FR_hybrid_14",
+      "scenario": "Find guided content for a specific need through search or browse",
+      "steps": [
+        "Open the library.",
+        "Search for or browse to one need such as grief support.",
+        "Review the results shown for that need."
+      ],
+      "expected_result": "The app shows guided content that corresponds to the selected need and keeps it grouped under a matching category or entry point."
+    },
+    {
+      "test_id": "T_hybrid_029",
+      "requirement_id": "FR_hybrid_15",
+      "scenario": "Record a completed session in user history",
+      "steps": [
+        "Complete a meditation session while signed in.",
+        "Open the progress, history, or account area.",
+        "Review the latest completed activity."
+      ],
+      "expected_result": "The completed session appears in the user history or progress view."
+    },
+    {
+      "test_id": "T_hybrid_030",
+      "requirement_id": "FR_hybrid_15",
+      "scenario": "Preserve routine progress after reopening the app",
+      "steps": [
+        "Complete sessions across multiple days on the same account.",
+        "Close and reopen the app.",
+        "Open the progress, history, or milestone view."
+      ],
+      "expected_result": "The app shows session history or milestone progress that matches the completed sessions after the app is reopened."
     }
   ]
 }
